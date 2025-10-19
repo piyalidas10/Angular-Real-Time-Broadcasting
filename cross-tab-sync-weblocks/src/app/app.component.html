@@ -1,0 +1,14 @@
+<main>
+      <h1>Cross-Tab Sync Demo</h1>
+      <p>
+        Open this app in two tabs. Click 'Sync Data' in both at the same time.
+        Check the console to see only one tab becomes the "leader".
+      </p>
+
+      <button (click)="onSync()">Sync Data</button>
+
+      <h2>Current Data:</h2>
+      <ul>
+        <li *ngFor="let item of data$ | async">{{ item }}</li>
+      </ul>
+    </main>
